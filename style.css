@@ -1,0 +1,110 @@
+body {
+        background-color: #f0f8ff;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .navbar {
+        background-color: #0078D7;
+        padding: 12px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .navbar .nav-link {
+        color: white !important;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .fare-guide {
+        font-size: 28px;
+        font-weight: bold;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .ticket-price {
+        background-color: #001f3f;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        padding: 25px;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .form-label {
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        padding: 6px;
+        display: inline-block;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    .btn-info {
+        font-size: 18px;
+        padding: 8px 35px;
+        font-family: 'Roboto', sans-serif;
+        min-width: 180px;
+    }
+    
+    .btn-warning {
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .fare-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
+    }
+    
+    .btn-outline-success, .btn-outline-primary {
+        font-size: 14px;
+        padding: 4px 12px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .destination-box {
+        display: inline-block;
+        min-width: 200px;
+        padding: 8px;
+    }
+    
+    #LRT{
+        border-radius: 15px;
+        border-style: solid;
+    }
+
+    .navbar-nav{
+        margin-right: auto;
+    }
+
+    #ticket-label{
+        font-size: 34px;
+    }
+
+    
+
+    #ticket-types-label{
+        font-weight: bold;
+    }
+    
+    .DF-text{
+        font-size: 35px;
+    }
+
+    footer { text-align: center; padding: 20px; background: #f8f9fa; margin-top: 20px; }
+
+    #txt, #email, #comment{
+        border-width: 5px;
+        border-radius: 7px;
+        background-color: lightblue;
+    }

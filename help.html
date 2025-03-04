@@ -1,0 +1,43 @@
+<head>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="train.jpeg" alt="Logo" height="75"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule.html">Train Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+            </ul>
+            <div class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="search..." id="SearchBar">
+                <button class="btn btn-warning" onclick="SearchUp('SearchBar')">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="fare-guide">Leave a Comment</div>
+    <br>
+    <div class="container">
+        <textarea class="form-control" placeholder="Type here..." id="comment"></textarea>
+        <input type="text" class="form-control mt-2" placeholder="Name*" id="txt">
+        <input type="email" class="form-control mt-2" placeholder="Email*" id="email">
+        <button class="btn btn-warning mt-2">Submit Feedback</button>
+    </div>
+   
+    <footer>
+        <section id="contact" class="container mt-4">
+            <h2 class="fare-guide">Contact Us</h2>
+            <p>Email: support@lrt1.com</p>
+            <p>Phone: 123-456-7890</p>
+        </section>
+    </footer>
+   
+
+
+</body>

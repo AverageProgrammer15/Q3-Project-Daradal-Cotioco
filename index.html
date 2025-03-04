@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRT Fare Guide</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="ChangeCost()">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="train.jpeg" alt="Logo" height="75"></a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="schedule.html">Train Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+            </ul>
+            <div class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="search..." id="SearchBar">
+                <button class="btn btn-warning" onclick="SearchUp('SearchBar')">Search</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="fare-guide">Fare Guide</div>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img style="width:500px;" id="LRT" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEs2Upl7MWcaoaIzKxpLhmq8bXHT-IUBAUCg&s" alt="Train Map" class="img-fluid">
+            </div>
+            <div class="col-md-4 text-center">
+                <label class="form-label">LEAVING FROM:</label>
+                <br>
+              
+                    <select id="start" onchange="ChangeCost()" class="btn btn-info">
+                        <option value="Default">Select a Station</option>
+<option value="1">Roosevelt</option>
+<option value="2">Balintawak</option>
+<option value="3">Monumento</option>
+<option value="4">5th Avenue</option>
+<option value="5">R. Papa</option>
+<option value="6">Abad Santos</option>
+<option value="7">Blumentritt</option>
+<option value="8">Tayuman</option>
+<option value="9">Bambang</option>
+<option value="10">Doroteo Jose</option>
+<option value="11">Carriedo</option>
+<option value="12">Central Terminal</option>
+<option value="13">United Nations</option>
+<option value="14">Pedro Gil</option>
+<option value="15">Quirino</option>
+<option value="16">Vito Cruz</option>
+<option value="17">Gil Puyat</option>
+<option value="18">Libertad</option>
+<option value="19">EDSA</option>
+<option value="20">Baclaran</option>
+
+                    </select>
+                
+                <br><br>
+                <label class="form-label">GOING TO:</label>
+                <br>
+                
+                    <select id="end" onchange="ChangeCost()" class="btn btn-info">
+                        <option value="Default">Select a Station</option>
+<option value="1">Roosevelt</option>
+<option value="2">Balintawak</option>
+<option value="3">Monumento</option>
+<option value="4">5th Avenue</option>
+<option value="5">R. Papa</option>
+<option value="6">Abad Santos</option>
+<option value="7">Blumentritt</option>
+<option value="8">Tayuman</option>
+<option value="9">Bambang</option>
+<option value="10">Doroteo Jose</option>
+<option value="11">Carriedo</option>
+<option value="12">Central Terminal</option>
+<option value="13">United Nations</option>
+<option value="14">Pedro Gil</option>
+<option value="15">Quirino</option>
+<option value="16">Vito Cruz</option>
+<option value="17">Gil Puyat</option>
+<option value="18">Libertad</option>
+<option value="19">EDSA</option>
+<option value="20">Baclaran</option>
+
+                    </select>
+                
+                <br>
+                <br>
+                <label for="ticket-types" id="ticket-types-label">Ticket Types:</label>
+                <div class="fare-buttons" name="ticket-types">
+                    <button class="btn btn-outline-success" onclick="RegularFee('ticket-price')">Regular Fare</button>
+                    <button class="btn btn-outline-primary" onclick="DiscountedFee('ticket-price')">Discounted Fare</button>
+                </div>
+                <br>
+                <img src="ticket.png" alt="Single Journey Ticket" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <div class="ticket-price"> <span id="ticket-label">Ticket Price:</span>
+                    <br>
+                    <span id="ticket-price"> 0 Php</span>
+                    <br>
+                    <span id="fare-type">N/A</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
+
+
+
+
+
+<!-- <head>
+
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="ChangeCost()">
+	
+	
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="LRT Logo" width="40"> Home</a>
+            <a class="nav-link" href="schedule.html">Train Schedule</a>
+            <a class="nav-link" href="help.html">Help</a>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="header">Fare Guide</div>
+   
+    <div class="container-flex">
+        <img src="lrt-map.png" alt="LRT Map" width="300">
+        <div>
+            <label><strong>LEAVING FROM:</strong></label>
+            <select id="start" class="form-control" onchange="ChangeCost()">
+                <option value="Default">Select a Station</option>
+                <option value="1">Roosevelt</option>
+                <option value="2">Balintawak</option>
+                <option value="3">Baclaran</option>
+            </select>
+            <label><strong>GOING TO:</strong></label>
+            <select id="end" class="form-control" onchange="ChangeCost()">
+                <option value="Default">Select a Station</option>
+                <option value="1">Roosevelt</option>
+                <option value="2">Balintawak</option>
+                <option value="3">Baclaran</option>
+            </select>
+            <button class="btn btn-primary" onclick="RegularFee('fareResult')">Regular Fare</button>
+            <button class="btn btn-secondary" onclick="DiscountedFee('fareResult')">Discounted Fare</button>
+        </div>
+        <div class="ticket-box">
+            <p>Ticket Price:</p>
+            <p id="fareResult">0.00</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+
+
+
+	
+</body>
+ -->
+
+
