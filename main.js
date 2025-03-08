@@ -11,7 +11,7 @@ function RegularFee(id){
        
         
         if (ModifiedFee == 0){
-            document.getElementById(id).innerHTML = "<span class='text-warning'>Please choose different stations</span>";
+            document.getElementById(id).innerHTML = "<span class='text-danger'>Please choose different stations</span>";
             
         }else{
             document.getElementById(id).innerHTML = ModifiedFee + " Php";
@@ -32,7 +32,7 @@ function DiscountedFee(id){
     ModifiedFee = OriginalFee * Multiplier;
     Discounted = ModifiedFee * 0.80; // Applying 20% discount
     if (Discounted == 0){
-        document.getElementById(id).innerHTML = "<span class='text-warning'>Please choose different stations</span>";
+        document.getElementById(id).innerHTML = "<span class='text-danger'>Please choose different stations</span>";
     } else{
         document.getElementById(id).innerHTML = Discounted + " Php";
         document.getElementById('fare-type').innerHTML = "<span class='text-primary DF-text'>Discounted Fare</span>"
@@ -46,19 +46,23 @@ function DiscountedFee(id){
 
 function ChangeCost(){
     if (document.getElementById('start').value != "Default" && document.getElementById('end').value != "Default"){
-    CanCalculate = true
-    Start = Number(document.getElementById('start').value);
-    End = Number(document.getElementById('end').value);
+     CanCalculate = true
+     Start = Number(document.getElementById('start').value);
+     End = Number(document.getElementById('end').value);
 
-    if (Start > End){
-        Multiplier = Start - End;
-    } else if (End > Start){
-        Multiplier = End - Start;
-    } else if (End == Start){
-        Multiplier = 0;
-    }
+     if (Start > End){
+         Multiplier = Start - End;
+         document.getElementById("ticket-price").innerHTML = "<span class='text-danger'>Please select a ticket type </span>"
+     } else if (End > Start){
+         Multiplier = End - Start;
+         document.getElementById("ticket-price").innerHTML = "<span class='text-danger'>Please select a ticket type </span>"
+     } else if (End == Start){
+         Multiplier = 0;
+         document.getElementById("ticket-price").innerHTML = "<span class='text-danger'>Please choose different stations</span>";
+     }
 
-    console.log("New Multiplier:", Multiplier);
+     console.log("New Multiplier:", Multiplier);
+     
 
     
     } else{
