@@ -109,10 +109,7 @@ body {
         background-color: lightblue;
     }
 
-    #SearchBtn{
-        background-color: white;
-    }
-
+    
     .description{
         text-align: center;
         font-style: italic;
@@ -155,4 +152,28 @@ body {
         border-style: solid;
         padding: 5px;
         font-style: normal;
+    }
+
+    .Copyright{
+        text-align: center;
+        background-color: red;
+        color: white;
+        border-radius: 45px;
+        border-style: solid;
+        border-color: black;
+        font-weight: bold;
+        top: 0;
+        
+
+
+    }
+
+    #sched-desc{
+        color: white;
+        background-color: black;
+    }
+
+    #Sched-html{
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c0/Two_LRT-1_4th_Gen_trains_at_EDSA_2025-02-05.jpg");
+        background-size: cover;
     }
