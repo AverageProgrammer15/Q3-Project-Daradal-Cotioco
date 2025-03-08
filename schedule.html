@@ -13,18 +13,20 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="schedule.html">Train Schedule</a></li>
                 <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+                <li class="nav-item"><a class="nav-link" href="tips.html">Passenger Safety</a></li>
             </ul>
             <div class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="search..." id="SearchBar">
-                <button class="btn btn-warning" onclick="SearchUp('SearchBar')">Search</button>
+                <button class="btn btn-warning" onclick="SearchUp('SearchBar')" id="SearchBtn">Search</button>
             </div>
         </div>
     </nav>
 
     <div class="fare-guide">Train Schedule</div>
+    <p class="description">The LRT train schedule generally remains consistent, with minimal deviations, unless unforeseen technical issues arise, leading to potential delays or adjustments.</p>
     <br>
     <div class="container">
-        <table class="table table-bordered text-center table-hover table-primary" >
+        <table class="table table-bordered text-center table-hover table-warning" >
             <tr>
                 <th>Day</th><th>Operating Hours (North Ave.)</th><th>Operating Hours (Baclaran)</th>
             </tr>
