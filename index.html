@@ -17,21 +17,22 @@
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="schedule.html">Train Schedule</a></li>
                 <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+                <li class="nav-item"><a class="nav-link" href="tips.html">Passenger Safety</a></li>
             </ul>
             <div class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="search..." id="SearchBar">
-                <button class="btn btn-warning" onclick="SearchUp('SearchBar')">Search</button>
+                <button class="btn btn-warning" onclick="SearchUp('SearchBar')" id="SearchBtn">Search</button>
             </div>
         </div>
     </nav>
     
     <div class="fare-guide">Fare Guide</div>
     
+    
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-4">
-                <img style="width:500px;" id="LRT" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEs2Upl7MWcaoaIzKxpLhmq8bXHT-IUBAUCg&s" alt="Train Map" class="img-fluid">
-            </div>
+            
+
             <div class="col-md-4 text-center">
                 <label class="form-label">LEAVING FROM:</label>
                 <br>
@@ -98,18 +99,31 @@
                     <button class="btn btn-outline-primary" onclick="DiscountedFee('ticket-price')">Discounted Fare</button>
                 </div>
                 <br>
-                <img src="ticket.png" alt="Single Journey Ticket" class="img-fluid">
+               
             </div>
+
             <div class="col-md-4">
+                
                 <div class="ticket-price"> <span id="ticket-label">Ticket Price:</span>
                     <br>
                     <span id="ticket-price"> 0 Php</span>
                     <br>
                     <span id="fare-type">N/A</span>
+                    
                 </div>
+                <img src="ticket.png" alt="Single Journey Ticket" class="img-fluid">
             </div>
+
+            <div class="col-md-4">
+                <img style="width:500px;" id="LRT" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEs2Upl7MWcaoaIzKxpLhmq8bXHT-IUBAUCg&s" alt="Train Map" class="img-fluid">
+            </div>
+           
+
+
         </div>
     </div>
+
+    
     
 
 </body>
@@ -117,65 +131,5 @@
 
 
 
-
-
-<!-- <head>
-
-	<script src="main.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-</head>
-
-<body onload="ChangeCost()">
-	
-	
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="logo.png" alt="LRT Logo" width="40"> Home</a>
-            <a class="nav-link" href="schedule.html">Train Schedule</a>
-            <a class="nav-link" href="help.html">Help</a>
-            <div class="search-box">
-                <input type="text" placeholder="Search...">
-                <button>Search</button>
-            </div>
-        </div>
-    </nav>
-   
-    <div class="header">Fare Guide</div>
-   
-    <div class="container-flex">
-        <img src="lrt-map.png" alt="LRT Map" width="300">
-        <div>
-            <label><strong>LEAVING FROM:</strong></label>
-            <select id="start" class="form-control" onchange="ChangeCost()">
-                <option value="Default">Select a Station</option>
-                <option value="1">Roosevelt</option>
-                <option value="2">Balintawak</option>
-                <option value="3">Baclaran</option>
-            </select>
-            <label><strong>GOING TO:</strong></label>
-            <select id="end" class="form-control" onchange="ChangeCost()">
-                <option value="Default">Select a Station</option>
-                <option value="1">Roosevelt</option>
-                <option value="2">Balintawak</option>
-                <option value="3">Baclaran</option>
-            </select>
-            <button class="btn btn-primary" onclick="RegularFee('fareResult')">Regular Fare</button>
-            <button class="btn btn-secondary" onclick="DiscountedFee('fareResult')">Discounted Fare</button>
-        </div>
-        <div class="ticket-box">
-            <p>Ticket Price:</p>
-            <p id="fareResult">0.00</p>
-        </div>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-	
-
-
-
-	
-</body>
- -->
 
 
